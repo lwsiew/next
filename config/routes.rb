@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get 'admin', to: 'users#admin', as: 'admin'
 
+  get "/auth/:provider/callback" => "sessions#create_from_omniauth"
+
+
 end
