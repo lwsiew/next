@@ -96,9 +96,7 @@
   <body>
   <%= link_to "Home", root_path %>
 </br>
-  <%= form_for "", url: places_path, role: "search", method: :get do %>
-    <%= text_field_tag :search, @search_term, placeholder: "Search..." %>
-  <% end %>
+
 </br>
     <% if current_user %>
   Logged in as <%= current_user.email %>.
